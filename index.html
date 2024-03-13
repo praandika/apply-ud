@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="apply job vacancy" />
+    <meta property="og:title" content="Apply" />
+    <meta property="og:url" content="https://yamahabismagroup.com/category/careers/" />
+    <meta property="og:description" content="yamaha bisma careers" />
+    <meta property="og:image" content="https://yamahabismagroup.com/apply/bisma-career.png/" />
+    <meta property="og:type" content="article" />
+    <link rel="icon" href="bisma-career.png">
+    <link rel="apple-touch-icon" href="bisma-career.png">
+    <title>Apply Job</title>
+</head>
+<body onload="directLink()">
+    <script>
+        function directLink() {
+            // You can get url_string from window.location.href if you want to work with
+            // the URL of the current page
+            let urlString = window.location.href;
+            let url = new URL(urlString);
+            let subject = url.searchParams.get('subject');
+            let sub = subject.replace('+', '%20');
+            window.location.href = `mailto:bismahsn.aa0104@gmail.com?subject=${sub}`;
+        }
+    </script>
+</body>
+</html>
